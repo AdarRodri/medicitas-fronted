@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1769aa;
+    --primary-dark: #0d4f80;
+    --secondary: #28a9a1;
+    --background: #f4f8fb;
+    --white: #ffffff;
+    --text: #243447;
+    --muted: #718096;
+    --border: #dce6ef;
+    --danger: #d9534f;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* HEADER */
+
+.header {
+    min-height: 80px;
+    padding: 15px 6%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.logo h1 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+
+.logo span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.nav button {
+    border: none;
+    background: transparent;
+
+    color: var(--text);
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.nav button:hover {
+    background: #edf5fa;
+    color: var(--primary);
+}
+
+
+.btn-outline {
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+
+/* MAIN */
+
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 50px 20px;
+}
+
+
+/* LOGIN */
+
+.login-section,
+.registro-section {
+    display: flex;
+    justify-content: center;
+}
+
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+
+    background: var(--white);
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 35px rgba(40, 70, 90, 0.10);
+
+    border: 1px solid var(--border);
+
+    text-align: center;
+}
+
+
+.login-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #e8f5f4;
+
+    color: var(--secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.login-card h2 {
+    margin: 0 0 10px;
+
+    font-size: 27px;
+
+    color: var(--text);
+}
+
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+/* FORMULARIOS */
+
+.form-group {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* BOTONES */
+
+.btn-primary {
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+
+.btn-login {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+
+.link-button {
+    border: none;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    padding: 0;
+}
+
+
+.login-info {
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* PANEL */
+
+.app-section {
+    width: 100%;
+}
+
+
+.welcome-card {
+    background:
+        linear-gradient(
+            135deg,
+            #1769aa,
+            #28a9a1
+        );
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(23, 105, 170, 0.2);
+}
+
+
+.small-label {
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    letter-spacing: 1px;
+}
+
+
+.welcome-card h2 {
+    margin: 8px 0;
+
+    font-size: 30px;
+}
+
+
+.welcome-card p {
+    margin: 0;
+
+    opacity: 0.9;
+}
+
+
+.medical-icon {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 55px;
+
+    font-weight: bold;
+}
+
+
+.content-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    min-height: 200px;
+}
+
+
+.content-card h3 {
+    margin-top: 0;
+}
+
+
+/* CITAS */
+
+.cita {
+    border: 1px solid var(--border);
+
+    border-left: 5px solid var(--primary);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background: #fbfdff;
+}
+
+
+.cita strong {
+    color: var(--primary);
+
+    font-size: 18px;
+}
+
+
+/* TOAST */
+
+.toast {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #263238;
+
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 8px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+
+.toast.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* UTILIDAD */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+
+    .nav {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+
+    .main-container {
+        padding: 30px 15px;
+    }
+
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .welcome-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+/* PANEL DEL PACIENTE */
+.section-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px;flex-wrap:wrap}
+.section-heading h3{margin:5px 0 7px;font-size:25px;color:var(--text)}
+.section-heading p,.panel-subheading p{margin:0;color:var(--muted);line-height:1.5}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--secondary)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0 30px}
+.stat-card{padding:21px;border:1px solid var(--border);border-radius:13px;background:#fbfdff;display:flex;flex-direction:column;gap:8px}
+.stat-card span{color:var(--muted);font-size:13px}.stat-card strong{font-size:30px;color:var(--primary)}.stat-card small{color:var(--muted)}
+.panel-subheading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0}
+.panel-subheading h3{margin:0}
+.appointment-card{display:flex;align-items:center;gap:18px;padding:18px;margin:12px 0;border:1px solid var(--border);border-radius:12px;background:#fff}
+.appointment-date{width:58px;min-width:58px;height:64px;border-radius:10px;background:#eaf4fb;color:var(--primary);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.appointment-date span{font-size:23px;font-weight:700}.appointment-date small{text-transform:capitalize}
+.appointment-info{flex:1;min-width:0}.appointment-info h4{margin:0 0 8px}.appointment-info p{margin:5px 0;color:var(--muted);font-size:13px;overflow-wrap:anywhere}
+.appointment-actions{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.status-badge{display:inline-block;border-radius:20px;padding:6px 10px;font-size:12px;font-weight:700;background:#e9f3fb;color:#1769aa;white-space:nowrap}
+.status-cancelada{background:#fdeceb;color:#b42318}.status-atendida{background:#e5f7ed;color:#167647}.status-confirmada{background:#e5f7ed;color:#167647}.status-pendiente,.status-programada{background:#fff4d6;color:#8a5a00}
+.btn-secondary,.btn-small{border:1px solid var(--border);background:#fff;color:var(--text);padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}.btn-secondary:hover{background:#f3f7fa}
+.btn-small{font-size:12px;padding:7px 10px}.btn-danger-outline{border-color:#f0c5c2;color:var(--danger)}.btn-danger-outline:hover{background:#fff2f1}.btn-small:disabled,.btn-primary:disabled{opacity:.6;cursor:wait}
+.empty-state,.error-state,.loading-state{padding:32px 18px;text-align:center;border:1px dashed var(--border);border-radius:12px;background:#fbfdff;color:var(--muted)}.empty-state h4,.error-state h3{color:var(--text);margin:8px 0}.empty-state p,.error-state p{line-height:1.5}.empty-icon{font-size:30px;color:var(--primary)}
+.patient-tip,.form-notice{padding:14px 16px;margin-top:20px;border-radius:9px;background:#edf7fb;color:#426276;font-size:13px;line-height:1.5}
+.filters-row{display:grid;grid-template-columns:auto minmax(150px,200px) auto minmax(180px,1fr);align-items:center;gap:12px;padding:15px;background:#f8fbfd;border-radius:10px;margin-bottom:18px}.filters-row label{font-size:13px;font-weight:700}.filters-row input,.filters-row select,.appointment-form select,.appointment-form input{width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;background:white;font:inherit;color:var(--text)}
+.appointment-form{max-width:760px}.appointment-form .form-row{grid-template-columns:1fr 1fr}.form-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.profile-item{border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}.profile-item span{font-size:13px;color:var(--muted)}.profile-item strong{text-transform:none}
+@media(max-width:700px){.stats-grid{grid-template-columns:1fr}.appointment-card{align-items:flex-start;flex-wrap:wrap}.appointment-actions{width:100%;flex-direction:row;align-items:center;justify-content:space-between}.filters-row{grid-template-columns:1fr}.appointment-form .form-row,.profile-grid{grid-template-columns:1fr}.section-heading .btn-primary{width:100%}.form-actions{flex-direction:column-reverse}.form-actions button{width:100%}}
+
+.btn-success{border-color:#a9dcc0;background:#e5f7ed;color:#167647}.btn-success:hover{background:#d3f0e0}
+
+/* ADMINISTRADOR: gestión de médicos */
+.doctor-admin-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.doctor-form-card,.doctor-list-card{padding:22px;border:1px solid var(--border);border-radius:14px;background:#fff}
+.doctor-form-card h4{margin:0 0 6px;font-size:19px;color:var(--text)}
+.doctor-form-help{margin:0 0 18px;color:var(--muted);font-size:13px}
+.doctor-list-card .panel-subheading{margin-top:0}
+.doctor-admin-card{display:flex;align-items:center;gap:14px;padding:14px;margin:10px 0;border:1px solid var(--border);border-radius:12px;background:#fbfdff}
+.doctor-avatar{width:44px;min-width:44px;height:44px;border-radius:50%;background:#eaf4fb;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+.doctor-admin-info{flex:1;min-width:0}.doctor-admin-info h4{margin:0 0 6px;color:var(--text)}.doctor-admin-info p{margin:3px 0;color:var(--muted);font-size:13px;overflow-wrap:anywhere}
+.appointment-note{color:var(--muted);font-size:12px;text-align:right}
+@media(max-width:900px){.doctor-admin-layout{grid-template-columns:1fr}}
+
+/* LOGIN: lista pública de médicos junto a la tarjeta */
+.login-section{flex-wrap:wrap;gap:24px;align-items:flex-start}
+.public-doctors{width:100%;max-width:460px;background:var(--white);border:1px solid var(--border);border-radius:18px;padding:28px;box-shadow:0 10px 35px rgba(40,70,90,.10)}
+.public-doctors h3{margin:0 0 6px;color:var(--text)}
+.public-doctors>p{margin:0 0 16px;color:var(--muted);font-size:14px}
+.public-doctors .doctor-admin-card:first-child{margin-top:0}

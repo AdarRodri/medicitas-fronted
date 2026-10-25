@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MediCitas - Gestión de citas médicas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                +
+            </div>
+
+            <div>
+                <h1>MediCitas</h1>
+                <span>Tu salud, nuestra prioridad</span>
+            </div>
+
+        </div>
+
+
+        <nav id="mainNav" class="nav hidden">
+
+            <button id="btnInicio">
+                Inicio
+            </button>
+
+            <button id="btnCitas">
+                Mis citas
+            </button>
+
+            <button id="btnPerfil">
+                Mi perfil
+            </button>
+
+            <button id="btnMedicos" class="hidden" type="button">
+                Gestionar médicos
+            </button>
+
+            <button
+                id="btnCerrarSesion"
+                class="btn-outline"
+            >
+                Cerrar sesión
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="main-container">
+
+
+        <!-- LOGIN -->
+
+        <section
+            id="loginSection"
+            class="login-section"
+        >
+
+            <div class="login-card">
+
+                <div class="login-icon">
+                    +
+                </div>
+
+                <h2>Bienvenido a MediCitas</h2>
+
+                <p class="subtitle">
+                    Inicia sesión para gestionar
+                    tus citas médicas
+                </p>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary btn-login"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+
+                <div class="login-info">
+
+                    <span>
+                        ¿No tienes una cuenta?
+                    </span>
+
+                    <button
+                        id="btnMostrarRegistro"
+                        class="link-button"
+                    >
+                        Regístrate
+                    </button>
+
+                </div>
+
+            </div>
+
+            <aside class="public-doctors" aria-labelledby="tituloMedicosPublicos">
+                <h3 id="tituloMedicosPublicos">Nuestros médicos</h3>
+                <p>Profesionales disponibles en MediCitas.</p>
+                <div id="medicosPublicos"></div>
+            </aside>
+
+        </section>
+
+
+        <!-- REGISTRO -->
+
+        <section
+            id="registroSection"
+            class="registro-section hidden"
+        >
+
+            <div class="login-card">
+
+                <div class="login-icon">
+                    +
+                </div>
+
+                <h2>Crear cuenta</h2>
+
+                <p class="subtitle">
+                    Regístrate en MediCitas
+                </p>
+
+
+                <form id="registroForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="registroNombre">
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registroNombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registroApellido">
+                                Apellido
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registroApellido"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroEmail">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registroEmail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroPassword">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registroPassword"
+                            minlength="8"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-primary btn-login"
+                    >
+                        Crear cuenta
+                    </button>
+
+                </form>
+
+
+                <div class="login-info">
+
+                    <span>
+                        ¿Ya tienes una cuenta?
+                    </span>
+
+                    <button
+                        id="btnMostrarLogin"
+                        class="link-button"
+                    >
+                        Inicia sesión
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- APLICACIÓN -->
+
+        <section
+            id="appSection"
+            class="app-section hidden"
+        >
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <span class="small-label">
+                        PANEL PRINCIPAL
+                    </span>
+
+                    <h2 id="welcome">
+                        Bienvenido
+                    </h2>
+
+                    <p>
+                        Gestiona tus citas médicas
+                        de forma rápida y sencilla.
+                    </p>
+
+                </div>
+
+                <div class="medical-icon">
+                    +
+                </div>
+
+            </div>
+
+
+            <div
+                id="contenido"
+                class="content-card"
+            >
+
+                <h3>Inicio</h3>
+
+                <p>
+                    Selecciona una opción del menú
+                    para comenzar.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- NOTIFICACIONES -->
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <!-- JAVASCRIPT -->
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/citas.js"></script>
+<script src="js/medicos.js"></script>
+<script src="js/publico.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
